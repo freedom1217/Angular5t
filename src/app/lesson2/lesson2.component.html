@@ -1,0 +1,16 @@
+<br/>
+<h1 *ngIf="show">123</h1> <!--*ngIf="變數",條件true顯示,false不顯示 -->
+
+<!-- <h1 *ngIf="!show">123</h1> *ngIf="!變數" true->false -->
+<br/>
+<button (click)="xxx()">相反存在</button>
+
+<h1 *ngIf="showType">好棒</h1>
+<h1 *ngIf="!showType">好</h1>
+<button (click)="yyy()">change</button>
+
+<br/>
+<br/>
+<input type="text" [(ngModel)]="score">
+<p *ngIf="score >=60">好棒棒</p>
+<p *ngIf="60 > score">當學弟</p>

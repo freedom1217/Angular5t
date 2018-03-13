@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let item of weekday">{{item}}</li> <!--陣列-->
+</ul>
+
+<ul>
+  <li *ngFor="let item of users">{{item | json}}<li> <!--Object-->
+</ul>
+
+<ul>
+  <li *ngFor="let item of users">{{item['name']}}<li> <!--Object 方法二-->
+</ul>
+
+<ul>
+  <li *ngFor="let item of printInt">{{item}}</li>
+</ul>

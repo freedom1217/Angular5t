@@ -1,0 +1,66 @@
+English:<input type="text" [(ngModel)]="zzz.English">
+
+Chinese:<input type="text" [(ngModel)]="zzz.Chinese">
+
+<button (click)="save()">Save</button>
+<br/><br/>
+Filter <input type="text" [(ngModel)]="filter">
+<br/><br/>
+<table id="customers"> <!--樣式貼到css-->
+     <tr>
+      <th>English</th>
+      <th>Chinese</th>
+     
+    </tr>
+    <!--<tr *ngFor = "let s of ppp"> 抓到dic內容； *ngFor let 變數名稱 of 來源-->
+    <!--<tr *ngFor = "let s of ppp | filterBy: ['English']: 1 }"> 寫死的搜尋；記憶體位址不變，則不變-->
+        <tr *ngFor = "let s of ppp | filterByImpure: ['English']:  filter "> <!--記憶體位址不變，內容變，會變-->
+      <td>{{s.English}}</td>
+      <td>{{s.Chinese}}</td>
+    </tr>
+   <!-- <tr>
+      <td>Berglunds snabbköp</td>
+      <td>Christina Berglund</td>
+      
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      
+    </tr>
+    <tr>
+      <td>Ernst Handel</td>
+      <td>Roland Mendel</td>
+     
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+     
+    </tr>
+    <tr>
+      <td>Königlich Essen</td>
+      <td>Philip Cramer</td>
+      
+    </tr>
+    <tr>
+      <td>Laughing Bacchus Winecellars</td>
+      <td>Yoshi Tannamuri</td>
+     
+    </tr>
+    <tr>
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Giovanni Rovelli</td>
+      
+    </tr>
+    <tr>
+      <td>North/South</td>
+      <td>Simon Crowther</td>
+     
+    </tr>
+    <tr>
+      <td>Paris spécialités</td>
+      <td>Marie Bertrand</td>
+     
+    </tr> -->
+  </table>

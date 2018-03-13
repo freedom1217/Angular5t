@@ -24,7 +24,24 @@
 <app-lesson1></app-lesson1> <!--算匯率;算圓周,圓面積-->
 
 <app-lesson2></app-lesson2><!--if-->
-<!-- <app-lesson2></app-lesson2> -->
 
+<app-lesson3></app-lesson3><!--For-->
 
+{{now}} <!--原始日期格式 -->
+<br/>
+{{now | date:'yyyy-MM-dd'}}<!--轉格式-->
+
+<!--搜尋 ngx-pipes -->
+<p>{{ 'example' | repeat: 3: '@' }}</p> <!-- Output: "example@example@example"；別人寫的 -->
+
+<br/>
+{{aaa}}
+<br/>
+{{aaa.Account}}
+
+<br/><br/>
+
+<app-pratice1></app-pratice1> <!--新增字到字典-->
+
+<app-lesson4></app-lesson4> <!--child component-->
 

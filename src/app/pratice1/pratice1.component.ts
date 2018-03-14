@@ -25,7 +25,7 @@ export class Pratice1Component implements OnInit {
     console.log(this.ppp);
   }
 
-  filter:EnglishDic[]=[]
+  filter:EnglishDic[]=[];//查詢資料
 
   constructor() { }
 
@@ -37,5 +37,5 @@ export class Pratice1Component implements OnInit {
 export interface EnglishDic{
   English:string,
   Chinese:string
-
+  //如果用 English?:string；則繼承時，English非必填
 }

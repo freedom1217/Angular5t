@@ -1,0 +1,24 @@
+姓名： <input type="text" [(ngModel)]="t1.name">
+<br/><br/>
+成績： <input type="text" [(ngModel)]="t1.score">
+<br/><br/>
+
+<p *ngIf="t1.score >100">成績不能大於100</p>
+<p *ngIf="0 > t1.score">成績不能小於0</p>
+
+<button (click)="save()">送出</button>
+<br/><br/>
+filter <input type="text" [(ngModel)]="filter">
+<br/><br/>
+<table id="customers"> <!--樣式貼到css-->
+  <tr>
+   <th>姓名</th>
+   <th>成績</th>
+  
+  </tr>
+     <tr *ngFor = "let s of tAll | filterByImpure: ['score']:  filter "> <!--記憶體位址不變，內容變，會變-->
+   <td>{{s.name}}</td>
+   <td>{{s.score}}</td>
+ </tr>
+
+</table>

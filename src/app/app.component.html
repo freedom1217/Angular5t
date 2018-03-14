@@ -46,3 +46,15 @@
 <app-lesson4></app-lesson4> <!--child component-->
 
 <app-homework1></app-homework1><!--1070314-->
+
+<app-lesson5></app-lesson5> <!--input-->
+
+<app-lesson6></app-lesson6> <!--output;要再研究-->
+
+<app-lesson6-1></app-lesson6-1><!--引用hightlight-->
+
+<a [routerLink]="['/lesson1']">Lesson1</a><!--不會重新整理-->
+<a [routerLink]="['/lesson2']">Lesson2</a>
+<a href="/lesson2"></a> <!--會重新整理-->
+
+<router-outlet></router-outlet>

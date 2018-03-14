@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lesson1',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class Lesson1Component implements OnInit {
   name = '1';
   r = '1'
+
+ 
 
   constructor() { }
 

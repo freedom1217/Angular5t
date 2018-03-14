@@ -14,3 +14,8 @@
 <input type="text" [(ngModel)]="score">
 <p *ngIf="score >=60">好棒棒</p>
 <p *ngIf="60 > score">當學弟</p>
+<br/>
+
+<input type="text" [(ngModel)]="abc">
+
+output丟:<input type="text" [(ngModel)]="abc" (ngModelChange)="change($event)">

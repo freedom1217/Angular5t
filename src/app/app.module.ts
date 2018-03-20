@@ -22,6 +22,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { Homework2Component } from './homework2/homework2.component' ;
 import { Homework2BtnComponent } from './homework2-btn/homework2-btn.component';
 import { Lesson0Component } from './lesson0/lesson0.component';
+import { DyclassComponent } from './dyclass/dyclass.component';
+import { Jq1Component} from './jq1/jq1.component';
+import { Lesson7Component } from './lesson7/lesson7.component' ;
+import { BmiService } from './bmi.service';
 
 
 
@@ -41,6 +45,9 @@ import { Lesson0Component } from './lesson0/lesson0.component';
     Homework2Component,
     Homework2BtnComponent,
     Lesson0Component,
+    DyclassComponent,
+    Jq1Component,
+    Lesson7Component,
     Pratice1Component
   ],
   imports: [ //寫Module的地方
@@ -50,7 +57,9 @@ import { Lesson0Component } from './lesson0/lesson0.component';
     NgPipesModule //別人寫的
     
   ],
-  providers: [], //寫service的地方
+  providers: [ //寫service的地方
+    BmiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

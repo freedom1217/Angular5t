@@ -1,62 +1,22 @@
-{{name}}
-<br/>
-{{name + 123}}
+<!-- <app-lesson0></app-lesson0> -->
 
-<br/>
-<input type="text" value="abc123">
-<br/>
-<input type="text" [value]="name"> <!--單向綁定-->
-<br/>
-<input type="text" [(ngModel)]="name"> <!--雙向綁定,要import FormsModule-->
-<br/>
-
-<a href="https://www.google.com">Google</a>
-<br/>
-<a [href]="url">Google</a> <!--屬性綁定-->
-<br/>
-
-<button>Click</button>
-<button (click)="zzz()">Click me!</button><!--事件綁定-->
-
-<br/>
-<br/>
-<!--開新的component-->
-<app-lesson1></app-lesson1> <!--算匯率;算圓周,圓面積-->
-
-<app-lesson2></app-lesson2><!--if-->
-
-<app-lesson3></app-lesson3><!--For-->
-
-{{now}} <!--原始日期格式 -->
-<br/>
-{{now | date:'yyyy-MM-dd'}}<!--轉格式-->
-
-<!--搜尋 ngx-pipes -->
-<p>{{ 'example' | repeat: 3: '@' }}</p> <!-- Output: "example@example@example"；別人寫的 -->
-
-<br/>
-{{aaa}}
-<br/>
-{{aaa.Account}}
-
-<br/><br/>
-
-<app-pratice1></app-pratice1> <!--新增字到字典-->
-
-<app-lesson4></app-lesson4> <!--child component-->
-
-<app-homework1></app-homework1><!--1070314-->
-
-<app-lesson5></app-lesson5> <!--input-->
-
-<app-lesson6></app-lesson6> <!--output;要再研究-->
-
-<app-lesson6-1></app-lesson6-1><!--引用hightlight-->
-
-<a [routerLink]="['/lesson1']">Lesson1</a><!--不會重新整理-->
-<a [routerLink]="['/lesson2']">Lesson2</a>
-<a href="/lesson2"></a> <!--會重新整理-->
-
-<router-outlet></router-outlet>
-
-<app-homework2></app-homework2>
+<!-- <a [routerLink]="['/lesson0']">Lesson0</a> 之前app裏頭的 -->
+<!-- <app-lesson0></app-lesson0> -->
+<div class="container">
+    <a [routerLink]="['/lesson0']">Lesson0</a><!--單向綁定;雙向綁定,要import FormsModule;屬性綁定;事件綁定;日期格式轉格式;搜尋 ngx-pipes-->
+    <a [routerLink]="['/lesson1']">Lesson1</a><!--算匯率;算圓周,圓面積-->
+    <a [routerLink]="['/lesson2']">Lesson2</a><!--if-->
+    <a [routerLink]="['/lesson3']">Lesson3</a><!--For-->
+    <a [routerLink]="['/lesson4']">Lesson4</a> <!--child component-->
+    <br/>
+    <a [routerLink]="['/lesson5']">Lesson5</a><!--input-->
+    <a [routerLink]="['/lesson6']">Lesson6</a><!--?output;要再研究-->
+    <a [routerLink]="['/lesson6-1']">Lesson6-1</a><!--引用hightlight-->
+    <a [routerLink]="['/pratice1']">pratice1</a><!--新增字到字典-->
+    <a [routerLink]="['/homework1']">homework1</a><!--1070314-->
+    <a [routerLink]="['/homework2']">homework2</a> <!--?1070320,未完-->
+    <a [routerLink]="['/dyclass']">dyclass</a> <!--動態加css;抓網址參數-->
+    <a [routerLink]="['/jq1']">jq1</a><!--加bootstrap-->
+    <a [routerLink]="['/lesson7']">lesson7</a><!--service-->
+    <router-outlet></router-outlet><!--切換時必加-->
+</div>

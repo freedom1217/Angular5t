@@ -1,3 +1,62 @@
-<p>
-  lesson0 works!
-</p>
+{{name}}
+<br/>
+{{name + 123}}
+
+<br/>
+<input type="text" value="abc123">
+<br/>
+<input type="text" [value]="name"> <!--單向綁定-->
+<br/>
+<input type="text" [(ngModel)]="name"> <!--雙向綁定,要import FormsModule-->
+<br/>
+
+<a href="https://www.google.com">Google</a>
+<br/>
+<a [href]="url">Google</a> <!--屬性綁定-->
+<br/>
+
+<button>Click</button>
+<button (click)="zzz()">Click me!</button><!--事件綁定-->
+
+<br/>
+<br/>
+<!--開新的component-->
+<app-lesson1></app-lesson1> <!--算匯率;算圓周,圓面積-->
+
+<app-lesson2></app-lesson2><!--if-->
+
+<app-lesson3></app-lesson3><!--For-->
+
+{{now}} <!--原始日期格式 -->
+<br/>
+{{now | date:'yyyy-MM-dd'}}<!--轉格式-->
+
+<!--搜尋 ngx-pipes -->
+<p>{{ 'example' | repeat: 3: '@' }}</p> <!-- Output: "example@example@example"；別人寫的 -->
+
+<br/>
+{{aaa}}
+<br/>
+{{aaa.Account}}
+
+<br/><br/>
+
+<app-pratice1></app-pratice1> <!--新增字到字典-->
+
+<app-lesson4></app-lesson4> <!--child component-->
+
+<app-homework1></app-homework1><!--1070314-->
+
+<app-lesson5></app-lesson5> <!--input-->
+
+<app-lesson6></app-lesson6> <!--output;要再研究-->
+
+<app-lesson6-1></app-lesson6-1><!--引用hightlight-->
+
+<a [routerLink]="['/lesson1']">Lesson1</a><!--不會重新整理-->
+<a [routerLink]="['/lesson2']">Lesson2</a>
+<a href="/lesson2"></a> <!--會重新整理-->
+
+<router-outlet></router-outlet>
+
+<app-homework2></app-homework2>

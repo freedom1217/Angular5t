@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { BmiService } from '../bmi.service';
 
 @Component({
   selector: 'app-lesson2',
@@ -29,9 +30,10 @@ export class Lesson2Component implements OnInit {
     this.showType = !this.showType;
   }
 
-  constructor() { }
+  constructor(private bmiService:BmiService) { }
 
   ngOnInit() {
+    this.bmiService.pub_temp1 = 99;//修改公用的service變數
   }
 
 }

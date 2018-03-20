@@ -19,6 +19,9 @@ import { Lesson6Component } from './lesson6/lesson6.component';
 import { HightlightDirective } from './hightlight.directive';
 import { Lesson61Component } from './lesson6-1/lesson6-1.component';
 import { AppRoutingModule } from './app-routing.module';
+import { Homework2Component } from './homework2/homework2.component' ;
+import { Homework2BtnComponent } from './homework2-btn/homework2-btn.component';
+import { Lesson0Component } from './lesson0/lesson0.component';
 
 
 
@@ -35,6 +38,9 @@ import { AppRoutingModule } from './app-routing.module';
     Lesson6Component,
     HightlightDirective,
     Lesson61Component,
+    Homework2Component,
+    Homework2BtnComponent,
+    Lesson0Component,
     Pratice1Component
   ],
   imports: [ //寫Module的地方

@@ -1,0 +1,14 @@
+<p>
+  homework2 
+</p>
+
+<input type="text" [(ngModel)]="addNumber"><!--被加數-->
++
+<input type="text" [(ngModel)]="additions"><!--加數-->
+=
+
+<input type="text" [(ngModel)]="equalsIs"><!--和-->
+
+<br/>
+<app-homework2-btn [btn_AddedNumber]="addNumber" [btn_Additions]="additions" (output_equalsIs)="putOutputEqualsIs($event)"></app-homework2-btn>
+

@@ -8,8 +8,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class Homework2BtnComponent implements OnInit {
   @Input() btn_AddedNumber:number;
   @Input() btn_Additions:number;
+  @Input() btn_EqualsIs:number;
 
-  @Output() output_EqualsIs = new EventEmitter();
+  @Output() output_EqualsIs:EventEmitter<string> = new EventEmitter<string>();
 
   outData; //和
   go(){

@@ -10,10 +10,10 @@ export class Homework2Component implements OnInit {
   additions //加數
   equalsIs //和
 
-  putOutputEqualsIs($event:MouseEvent){
-    console.log($event);
+  putOutputEqualsIs(event:MouseEvent){
+    console.log(event);
     console.log('in');
-    this.equalsIs = $event;
+    this.equalsIs = event;
   }
 
   constructor() { }

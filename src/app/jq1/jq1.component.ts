@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-//declare var $:any; //如果types加成功則不用寫這個
+declare var $:any; //如果types加成功則不用寫這個
 
 @Component({
   selector: 'app-jq1',
@@ -14,7 +14,7 @@ export class Jq1Component implements OnInit {
   ngOnInit() {//用jQuery在這
     $(()=>{
       console.log('jquery start');
-      $
+      
     })
   }
 

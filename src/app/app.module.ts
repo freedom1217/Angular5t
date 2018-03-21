@@ -25,7 +25,9 @@ import { Lesson0Component } from './lesson0/lesson0.component';
 import { DyclassComponent } from './dyclass/dyclass.component';
 import { Jq1Component} from './jq1/jq1.component';
 import { Lesson7Component } from './lesson7/lesson7.component' ;
-import { BmiService } from './bmi.service';
+import { BmiService} from './bmi.service';
+import { Homework3Component } from './homework3/homework3.component' ;
+import { Homework3BtnComponent } from './homework3-btn/homework3-btn.component' ;
 
 
 
@@ -48,6 +50,8 @@ import { BmiService } from './bmi.service';
     DyclassComponent,
     Jq1Component,
     Lesson7Component,
+    Homework3Component,
+    Homework3BtnComponent,
     Pratice1Component
   ],
   imports: [ //寫Module的地方

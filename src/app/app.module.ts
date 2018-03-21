@@ -27,9 +27,14 @@ import { Jq1Component} from './jq1/jq1.component';
 import { Lesson7Component } from './lesson7/lesson7.component' ;
 import { BmiService} from './bmi.service';
 import { Homework3Component } from './homework3/homework3.component' ;
-import { Homework3BtnComponent } from './homework3-btn/homework3-btn.component' ;
+import { Homework3BtnComponent } from './homework3-btn/homework3-btn.component';
+import { CallhttpComponent } from './callhttp/callhttp.component' ;
+import { HttpService } from './http.service';
 
+import {HttpClientModule }from '@angular/common/http';;
+import { NgModelDrivenComponent } from './ng-model-driven/ng-model-driven.component' 
 
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [//寫Component的地方
@@ -52,17 +57,22 @@ import { Homework3BtnComponent } from './homework3-btn/homework3-btn.component' 
     Lesson7Component,
     Homework3Component,
     Homework3BtnComponent,
+    CallhttpComponent,
+    NgModelDrivenComponent,
     Pratice1Component
   ],
   imports: [ //寫Module的地方
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NgPipesModule //別人寫的
-    
+    NgPipesModule, //別人寫的
+    HttpClientModule,
+    ReactiveFormsModule //model-driven用
+
   ],
   providers: [ //寫service的地方
-    BmiService
+    BmiService,
+    HttpService
   ],
   bootstrap: [AppComponent]
 })

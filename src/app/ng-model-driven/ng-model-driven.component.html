@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>User Data</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" #refname class="form-control" formControlName="name"><!--要跟.ts一樣-->
+      <b>{{refname.className}}</b> <!--印文字方塊狀態-->
+      <div *ngIf="userForm.controls['name'].hasError('required')" class="alert alert-danger"><!--如果空白，則跳錯誤訊息-->
+        name為必填欄位
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" class="form-control" formControlName="email">
+      <div *ngIf="userForm.controls['email'].hasError('required')" class="alert alert-danger"><!--如果空白，則跳錯誤訊息-->
+        email為必填欄位
+      </div>
+      <div *ngIf="userForm.controls['email'].hasError('minlength')" class="alert alert-danger"><!--如果空白，則跳錯誤訊息-->
+       請輸入4碼以上
+      </div>
+    </div>
+    <div formGroupName="address">
+      <div class="form-group" >
+        <label>Street</label>
+        <input type="text" class="form-control" formControlName="street">
+      </div>
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" class="form-control" formControlName="city">
+      </div>
+      <div class="form-group">
+        <label>PostalCode</label>
+        <input type="text" class="form-control" formControlName="postalcode">
+        <div *ngIf="userForm.controls['address'].controls['postalcode'].hasError('pattern')" class="alert alert-danger"><!--如果空白，則跳錯誤訊息-->
+          請輸入5位數，且開頭為1~9
+        </div>
+      </div>
+    </div>
+    <!--如果驗證不過，按鈕不能按-->
+    <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

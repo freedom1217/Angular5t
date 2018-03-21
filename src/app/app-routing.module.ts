@@ -15,6 +15,8 @@ import { Lesson61Component } from './lesson6-1/lesson6-1.component';
 import { Jq1Component } from './jq1/jq1.component';
 import { Lesson7Component } from './lesson7/lesson7.component';
 import { Homework3Component } from './homework3/homework3.component';
+import { CallhttpComponent } from './callhttp/callhttp.component';
+import { NgModelDrivenComponent } from './ng-model-driven/ng-model-driven.component';
 
 const routes: Routes = [
     {path:'', redirectTo:'lesson0',pathMatch:'full'}, //沒輸入網址時會導向
@@ -34,6 +36,8 @@ const routes: Routes = [
     {path:'jq1', component:Jq1Component},  
     {path:'lesson7', component:Lesson7Component},  
     {path:'homework3', component:Homework3Component},
+    {path:'callhttp', component:CallhttpComponent},
+    {path:'ngModelDriven', component:NgModelDrivenComponent},
     {path:'**',component:Lesson3Component} //通常是error page
 ];
 
